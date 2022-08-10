@@ -1,0 +1,554 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 4% 96%;
+  height: 2000px;
+  width: 100vw;
+  background-image: url(imagenes/pattern.png);
+  overflow-x: hidden;
+}
+
+.layer {
+  /*LAYER SE UTILIZARA PARA HACER EL DIFUMINADO DE BACKGROUND*/
+  background-color: rgb(0 0 0 / 62%);
+  height: 100%;
+  width: 100%;
+}
+
+.of_header {
+  border-radius: 50px 50px 367px 367px / 0px 0px 138px 138px;
+  /*REDUCIMOS LA OPACIDAD DEL LAYER PARA QUE EL
+  FONDO SE PUEDA APRECIAR MEJOR */
+  background-color: rgba(0 0 0 /30%);
+  /*REDUCIMOS LA OPACIDAD DEL LAYER PARA QUE EL
+  FONDO SE PUEDA APRECIAR MEJOR */
+}
+
+header {
+  border-radius: 50px 50px 367px 367px / 0px 0px 138px 138px;
+  background-image: url(imagenes/header.jpg);
+  animation: layer_animation 200s infinite;
+}
+
+@keyframes layer_animation {
+  0% {
+    background-position-x: -100%;
+  }
+  25% {
+    background-position-x: -50%;
+  }
+  50% {
+    background-position-x: 0%;
+  }
+  75% {
+    background-position-x: 50%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.of_header > h1 {
+  color: white;
+  margin-left: 3%;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  width: 100vw;
+}
+
+#about {
+  background-image: url(imagenes/pexels-pixabay-270360.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 4%;
+  height: 20%;
+  width: 100vw;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.of_about {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  object-fit: fill;
+}
+#about_description {
+  height: 70%;
+}
+
+#img_perfil {
+  grid-column: 1/2;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#img_perfil > img {
+  opacity: 0;
+  width: 60%;
+  height: 70%;
+}
+
+#about_description {
+  grid-column: 2/3;
+  color: white;
+  opacity: 1;
+  /*value of margin will be change at the final version */
+  margin: 7% 7% 0% 7%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about_description > h1 {
+  opacity: 0;
+  word-break: break-all;
+  font-size: 100%;
+  background-color: black;
+}
+
+/*keyframe para que aparezca y desaparezca img y about
+no se ocupara directamente en css, se combinara en js*/
+/*APARICIONES*/
+@keyframes animation_about {
+  from {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes animation_img {
+  from {
+    transform: translateY(115%);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/*APARICIONES*/
+/*SE CONSIDERARA PONER UNA ANIMACION DE DESAPARICION
+CONFORME SE AVANZA EN LA PAGINA*/
+/*DESAPARICION CONTENIDO ABOUT*/
+
+@keyframes opacity_1 {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_2 {
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes opacity_3 {
+  100% {
+    opacity: 0;
+  }
+}
+
+/*keyframe para que aparezca y desaparezca img y about
+no se ocupara directamente en css, se combinara en js*/
+
+/*DESLIZAR*/
+#deslizar_div {
+  height: 13%;
+  max-height: 13%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.deslizar_img {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.des_one {
+  grid-row: 1/2;
+}
+
+.des_two {
+  grid-row: 2/3;
+}
+
+.des_three {
+  grid-row: 3/4;
+}
+
+@keyframes flecha {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.deslizar_img > img {
+  height: 55%;
+  width: 6%;
+}
+
+/*-------------CERTIFICATIONS--------------*/
+#certifications {
+  height: 24%;
+  overflow-y: hidden;
+}
+
+#certifications > h1 {
+  height: 17%;
+  text-align: center;
+}
+
+#certification_log_wrap {
+  height: 83%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow-y: visible;
+  opacity: 0%;
+  overflow-x: hidden;
+}
+
+@keyframes down_up {
+  from {
+    margin-top: 100%;
+    opacity: 0%;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 100%;
+  }
+}
+
+.certification_img {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  row-gap: 2%;
+}
+
+.css {
+  grid-column: 1/2;
+}
+
+@keyframes img_grow {
+  from {
+    align-items: center;
+    align-content: center;
+  }
+  to {
+    align-items: none;
+    align-content: none;
+  }
+}
+
+@keyframes img_hover {
+  from {
+  }
+  to {
+    -moz-transform: scale(1.4) translate(10px, 0px);
+    -webkit-transform: scale(1.4) translate(10px, 0px);
+    -o-transform: scale(1.4) translate(10px, 0px);
+    -ms-transform: scale(1.4) translate(10px, 0px);
+    transform: scale(1.5) translate(10px, 0px);
+    border-radius: 3%;
+    height: 90%;
+    width: 95%;
+    margin-top: 20%;
+    z-index: 2;
+  }
+}
+
+@keyframes img_out {
+  from {
+    -moz-transform: scale(1.4) translate(10px, 0px);
+    -webkit-transform: scale(1.4) translate(10px, 0px);
+    -o-transform: scale(1.4) translate(10px, 0px);
+    -ms-transform: scale(1.4) translate(10px, 0px);
+    transform: scale(1.5) translate(10px, 0px);
+    border-radius: 3%;
+    height: 90%;
+    width: 95%;
+    margin-top: 20%;
+    z-index: 2;
+  }
+  to {
+    max-height: 100%;
+    max-width: 100%;
+    background-color: rgb(3 0 50 / 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+    box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+    /*CHECKPOIINT OVERFLOW*/
+    overflow: hidden;
+  }
+}
+
+.responsive {
+  grid-column: 2/3;
+}
+
+.figma {
+  grid-column: 3/4;
+}
+
+.css > div:first-of-type,
+.responsive > div:first-of-type,
+.figma > div:first-of-type {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: rgb(3 0 50 / 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  overflow: visible;
+}
+
+#udemy,
+#responsive,
+#figma {
+  border-radius: 3%;
+  height: 85%;
+  width: 85%;
+}
+
+.img_title {
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #e2e2e2;
+  height: 60%;
+  margin-top: 3%;
+  background-color: rgb(0 0 0 / 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 80px 80px 80px 80px;
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+}
+
+/*END CERTIFICATIONS SECTION*/
+
+/*START PROJECTS SECTION*/
+#projects {
+  height: 26%;
+  overflow-y: hidden;
+}
+
+.projects_img > div:first-of-type {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: rgb(3 0 50 / 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+}
+#blog,
+#contact,
+#three {
+  border-radius: 10%;
+  height: 85%;
+  width: 85%;
+}
+
+#projects > h1 {
+  height: 20%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects_wrap {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  opacity: 0%;
+}
+
+.projects_img {
+  display: grid;
+  grid-template-rows: 70% 30%;
+  row-gap: 2%;
+}
+
+#projects_wrap > .one {
+  grid-column: 1/2;
+}
+
+#projects_wrap > .two {
+  grid-column: 2/3;
+}
+
+#projects_wrap > .three {
+  grid-column: 3/4;
+}
+
+.projects_img > div:last-of-type {
+  width: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  color: #e2e2e2;
+  font-size: 12px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  margin-top: 3%;
+  border-radius: 80px 80px 80px 80px;
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+}
+
+/*START FOOTER SECTION*/
+
+/*RESPONSIVE DESIGN START*/
+
+@media (min-width: 500px) and (max-width: 1100px) {
+  body {
+    height: 2500px;
+  }
+  #img_perfil > img {
+    width: 70%;
+    height: 60%;
+  }
+  #about {
+    margin-top: 5%;
+    height: 20%;
+  }
+  #deslizar_div {
+    height: 10%;
+  }
+  .deslizar_img > img {
+    height: 90%;
+  }
+  #certifications {
+    height: 32%;
+  }
+  #certifications > h1 {
+    height: 11%;
+  }
+  #certification_log_wrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "css responsive"
+      "figma figma";
+    height: 93%;
+  }
+  .css {
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    grid-area: css;
+  }
+  .responsive {
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    grid-area: responsive;
+  }
+  .figma {
+    margin-left: 27%;
+    width: 45%;
+    height: 90%;
+    grid-area: figma;
+  }
+  .css > div:first-of-type,
+  .responsive > div:first-of-type,
+  .figma > div:first-of-type {
+    max-height: 90%;
+    max-width: 90%;
+  }
+  #udemy,
+  #responsive,
+  #figma {
+    border-radius: 10%;
+    height: 90%;
+    width: 90%;
+  }
+
+  .img_title {
+    margin-top: 0%;
+    width: 90%;
+  }
+  /**/
+  #projects {
+    height: 32%;
+  }
+  #projects > h1 {
+    height: 11%;
+    align-items: flex-start;
+  }
+
+  #projects_wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "one two"
+      "three three";
+  }
+
+  #projects_wrap > .one {
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    grid-area: one;
+  }
+
+  #projects_wrap > .two {
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    grid-column: 2/3;
+    grid-area: two;
+  }
+
+  #projects_wrap > .three {
+    margin-left: 27%;
+    width: 45%;
+    height: 90%;
+    grid-area: three;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 699px) {
+  #img_perfil > img {
+    width: 70%;
+    height: 50%;
+  }
+}
+/*RESPONSIVE DESIGN END*/
