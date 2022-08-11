@@ -35,45 +35,45 @@ window.addEventListener("load", function () {
   //Efectos de agrandamiento secciones Certificacion y Proyectos
   if ((ancho) => 900) {
     css.addEventListener("mouseover", function () {
-      img_udemy.style.animation = "img_hover 1s forwards";
+      img_udemy.style.animation = "img_hover 0.5s forwards";
     });
     css.addEventListener("mouseout", function () {
-      img_udemy.style.animation = "img_out 1s forwards";
+      img_udemy.style.animation = "img_out 0.5s forwards";
     });
     //Responsive
     responsive.addEventListener("mouseover", function () {
-      img_camp.style.animation = "img_hover 1s forwards";
+      img_camp.style.animation = "img_hover 0.5s forwards";
     });
     responsive.addEventListener("mouseout", function () {
-      img_camp.style.animation = "img_out 1s forwards";
+      img_camp.style.animation = "img_out 0.5s forwards";
     });
     //figma
     figma.addEventListener("mouseover", function () {
-      img_figma.style.animation = "img_hover 1s forwards";
+      img_figma.style.animation = "img_hover 0.5s forwards";
     });
     figma.addEventListener("mouseout", function () {
-      img_figma.style.animation = "img_out 1s forwards";
+      img_figma.style.animation = "img_out 0.5s forwards";
     });
     //Blog
     type_blog.addEventListener("mouseover", function () {
-      img_type_blog.style.animation = "img_hover 1s forwards";
+      img_type_blog.style.animation = "img_hover 0.5s forwards";
     });
     type_blog.addEventListener("mouseout", function () {
-      img_type_blog.style.animation = "img_out 1s forwards";
+      img_type_blog.style.animation = "img_out 0.5s forwards";
     });
     //contact
     contact.addEventListener("mouseover", function () {
-      img_contact.style.animation = "img_hover 1s forwards";
+      img_contact.style.animation = "img_hover 0.5s forwards";
     });
     contact.addEventListener("mouseout", function () {
-      img_contact.style.animation = "img_out 1s forwards";
+      img_contact.style.animation = "img_out 0.5s forwards";
     });
     //three
     three.addEventListener("mouseover", function () {
-      img_three.style.animation = "img_hover 1s forwards";
+      img_three.style.animation = "img_hover 0.5s forwards";
     });
     three.addEventListener("mouseout", function () {
-      img_three.style.animation = "img_out 1s forwards";
+      img_three.style.animation = "img_out 0.5s forwards";
     });
   }
 
