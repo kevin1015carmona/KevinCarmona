@@ -2,21 +2,10 @@
 window.addEventListener("load", function () {
   var about = document.querySelector("#perfil_description");
   var img_perfil = document.querySelector("#perfil");
+  const social_wrap = document.querySelector("#white_background");
   //se crea una funcion para que cuando se cargue la pagina se
   //muestren elmcontenido de main> about
-  var css = document.querySelector(".css");
-  var responsive = document.querySelector(".responsive");
-  var figma = document.querySelector(".figma");
-  const ancho = parseInt(window.pageXOffset);
-  const img_udemy = document.querySelector("#udemy");
-  const img_camp = document.querySelector("#responsive");
-  const img_figma = document.querySelector("#figma");
-  var type_blog = document.querySelector(".one");
-  var contact = document.querySelector(".two");
-  var three = document.querySelector(".three");
-  const img_type_blog = document.querySelector("#blog");
-  const img_contact = document.querySelector("#contact");
-  const img_three = document.querySelector("#three");
+
   //Animacion de flechas deslizar / about-certificaciones
   var des_one = document.querySelector(".des_one");
   var des_two = document.querySelector(".des_two");
@@ -24,6 +13,27 @@ window.addEventListener("load", function () {
   des_one.style.animation = "flecha 1s infinite";
   des_two.style.animation = "flecha 1.1s infinite";
   des_three.style.animation = "flecha 1.2s infinite";
+
+  //certificaciones
+  var certification_log_wrap = document.querySelector(
+    "#certification_log_wrap"
+  );
+  var css = document.querySelector(".css");
+  var responsive = document.querySelector(".responsive");
+  var figma = document.querySelector(".figma");
+  const img_udemy = document.querySelector("#udemy");
+  const img_camp = document.querySelector("#responsive");
+  const img_figma = document.querySelector("#figma");
+
+  //Proyectos
+  var projects_wrap = document.querySelector("#projects_wrap");
+  var type_blog = document.querySelector(".one");
+  var contact = document.querySelector(".two");
+  var three = document.querySelector(".three");
+  const img_type_blog = document.querySelector("#blog");
+  const img_contact = document.querySelector("#contact");
+  const img_three = document.querySelector("#three");
+
   //Animacion de flechas deslizar / certificaciones-proyectos
   var des_four = document.querySelector(".des_four");
   var des_five = document.querySelector(".des_five");
@@ -33,7 +43,10 @@ window.addEventListener("load", function () {
   des_six.style.animation = "flecha 1.2s infinite";
 
   //Efectos de agrandamiento secciones Certificacion y Proyectos
-  if ((ancho) => 900) {
+  if (
+    window.matchMedia("(min-width:499px)").matches &&
+    window.matchMedia("(max-width:2000px)").matches
+  ) {
     css.addEventListener("mouseover", function () {
       img_udemy.style.animation = "img_hover 0.5s forwards";
     });
@@ -75,32 +88,20 @@ window.addEventListener("load", function () {
     three.addEventListener("mouseout", function () {
       img_three.style.animation = "img_out 0.5s forwards";
     });
-  }
-
-  window.addEventListener("scroll", function () {
-    //ubicar el min del punto de corte (matchMedia)
-    //animation of img
-    about.style.animation = "animation_about 1.5s forwards";
-    img_perfil.style.animation = "animation_img 1.5s forwards";
-  });
-
-  //Animacion de difuminado conforme de desplaza
-  window.addEventListener("scroll", function () {
-    if (
-      window.matchMedia("(min-width:100px)").matches &&
-      window.matchMedia("(max-width:1800px)").matches
-    ) {
+    //
+    window.addEventListener("scroll", function () {
+      //ubicar el min del punto de corte (matchMedia)
+      //animation of img
+      about.style.animation = "animation_about 1.5s forwards";
+      img_perfil.style.animation = "animation_img 1.5s forwards";
+      social_wrap.style.animation = "animation_img 1.5s forwards";
+      /////////////////////////////////
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
 
-      var certification_log_wrap = document.querySelector(
-        "#certification_log_wrap"
-      );
-      window.addEventListener("scroll", function () {
-        if (altura >= 500) {
-          certification_log_wrap.style.animation = "down_up 1s forwards";
-        }
-      });
+      if (altura >= 500) {
+        certification_log_wrap.style.animation = "down_up 1s forwards";
+      }
 
       if (altura >= 250 && altura <= 300) {
         css.style.opacity = "0.25";
@@ -156,14 +157,11 @@ window.addEventListener("load", function () {
         responsive.style.opacity = "1";
         figma.style.opacity = "1";
       }
+      ///////////////////////
 
-      var projects_wrap = document.querySelector("#projects_wrap");
-      window.addEventListener("scroll", function () {
-        if (altura >= 1100) {
-          projects_wrap.style.animation = "down_up 1s forwards";
-        }
-      });
-
+      if (altura >= 1100) {
+        projects_wrap.style.animation = "down_up 1s forwards";
+      }
       if (altura >= 910 && altura <= 940) {
         type_blog.style.opacity = "0.25";
         contact.style.opacity = "0.25";
@@ -181,6 +179,76 @@ window.addEventListener("load", function () {
         contact.style.opacity = "1";
         three.style.opacity = "1";
       }
-    }
-  });
+    });
+  } else if (
+    window.matchMedia("(min-width:100px)").matches &&
+    window.matchMedia("(max-width:498px)").matches
+  ) {
+    var comprobar_css = false;
+    var comprobar_camp = false;
+    css.addEventListener("click", function () {
+      if (comprobar_css == false || comprobar_camp == true) {
+        img_camp.style.animation = "img_out 0.5s forwards";
+        img_udemy.style.animation = "img_hover 0.5s forwards";
+        comprobar_css = true;
+        comprobar_camp = false;
+      } else if (comprobar_css == true || comprobar_camp == false) {
+        console.log(comprobar_css);
+        img_udemy.style.animation = "img_out 0.5s forwards";
+        comprobar_css = false;
+      }
+    });
+
+    responsive.addEventListener("click", function () {
+      comprobar_css = true;
+      console.log("valor de css= " + comprobar_css);
+      if (comprobar_camp == false || comprobar_css == true) {
+        img_udemy.style.animation = "img_out 0.5s forwards";
+        img_camp.style.animation = "img_hover 0.5s forwards";
+        comprobar_camp = true;
+      } else if (comprobar_camp == true || comprobar_css == false) {
+        img_camp.style.animation = "img_out 0.5s forwards";
+        comprobar_camp = false;
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      const altura = parseInt(window.pageYOffset);
+      console.log(altura);
+      img_perfil.style.animation = "left_right 1.5s forwards";
+      social_wrap.style.animation = "right_left 1.5s forwards";
+      about.style.animation = "down_up 1.5s forwards";
+      if (altura >= 300) {
+        css.style.animation = "right_left 1.5s forwards ";
+      }
+
+      if (altura >= 600) {
+        responsive.style.animation = "left_right 1.5s forwards";
+      }
+      if (altura >= 900) {
+        console.log("test");
+        figma.style.animation = " right_left 1.5s forwards";
+      }
+      if (altura >= 1500) {
+        type_blog.style.animation = "left_right 1.5s forwards";
+      }
+      if (altura >= 1800) {
+        contact.style.animation = "right_left 1.5s forwards";
+      }
+      if (altura >= 2150) {
+        three.style.animation = "left_right 1.5s forwards";
+      }
+    });
+  }
+
+  //
 });
+function newFunction(comprobar_camp) {
+  comprobar_camp = true;
+  return comprobar_camp;
+}
+
+function newFunction(comprobar_css) {
+  comprobar_css = true;
+  return comprobar_css;
+}
