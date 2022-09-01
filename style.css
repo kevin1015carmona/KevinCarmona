@@ -366,19 +366,17 @@ no se ocupara directamente en css, se combinara en js*/
 .figma > div:first-of-type {
   max-height: 100%;
   max-width: 100%;
-  background-color: rgb(3 0 50 / 40%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10%;
-  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
-  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   overflow: visible;
 }
 
 #udemy,
 #responsive,
 #figma {
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   border-radius: 3%;
   height: 85%;
   width: 85%;
@@ -410,17 +408,16 @@ no se ocupara directamente en css, se combinara en js*/
 .projects_img > div:first-of-type {
   max-height: 100%;
   max-width: 100%;
-  background-color: rgb(3 0 50 / 40%);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10%;
-  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
-  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
 }
 #blog,
 #contact,
 #three {
+  -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
+  box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   border-radius: 10%;
   height: 85%;
   width: 85%;
@@ -600,7 +597,7 @@ no se ocupara directamente en css, se combinara en js*/
     background-size: 160%;
   }
 }
-@media (min-width: 100px) and (max-width: 499px) {
+@media (min-width: 100px) and (max-width: 550px) {
   body {
     height: 3000px;
     grid-template-rows: 2% 98%;
