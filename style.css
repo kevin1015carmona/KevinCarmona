@@ -5,7 +5,7 @@
 
 body {
   display: grid;
-  grid-template-rows: 4% 96%;
+  grid-template-rows: 2% 98%;
   height: 2000px;
   width: 100vw;
   background-image: url(imagenes/pattern.png);
@@ -20,7 +20,6 @@ body {
 }
 
 .of_header {
-  border-radius: 50px 50px 367px 367px / 0px 0px 138px 138px;
   /*REDUCIMOS LA OPACIDAD DEL LAYER PARA QUE EL
   FONDO SE PUEDA APRECIAR MEJOR */
   background-color: rgba(0 0 0 /30%);
@@ -32,7 +31,6 @@ body {
 }
 
 header {
-  border-radius: 50px 50px 367px 367px / 0px 0px 138px 138px;
   background-image: url(imagenes/header.jpg);
   animation: layer_animation 200s infinite;
 }
@@ -56,6 +54,7 @@ header {
 }
 
 .of_header > h1 {
+  height: 100%;
   color: white;
   margin-left: 3%;
   text-align: center;
@@ -158,7 +157,6 @@ main {
 
 #about_description > h1 {
   opacity: 0;
-  word-break: break-all;
   font-size: 100%;
   background-color: black;
 }
@@ -488,7 +486,7 @@ no se ocupara directamente en css, se combinara en js*/
     height: 60%;
   }
   #about {
-    margin-top: 5%;
+    margin-top: 10%;
     height: 20%;
   }
   #deslizar_div {
@@ -608,7 +606,8 @@ no se ocupara directamente en css, se combinara en js*/
   #about {
     background-size: 100%;
     background-repeat: repeat-y;
-    height: 15%;
+    height: 12%;
+    margin-top: 10%;
   }
   .of_about {
     grid-template-columns: 100%;
