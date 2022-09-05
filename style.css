@@ -54,10 +54,70 @@ header {
 }
 
 .of_header > h1 {
-  height: 100%;
   color: white;
-  margin-left: 3%;
+  height: 100%;
+  float: left;
+  margin: 5px 0px 0px 5px;
   text-align: center;
+}
+
+button {
+  display: block;
+  float: right;
+  margin: 5px 25px 0px 0px;
+  width: 6%;
+  max-width: 6%;
+  height: 75%;
+  max-height: 75%;
+  background-color: #acacacf0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.bar {
+  height: 15%;
+  width: 70%;
+  background-color: black;
+}
+
+@keyframes nav_menu1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg) translate(-8px, 7px);
+  }
+}
+
+button:hover > .menu1 {
+  animation: nav_menu1 1s forwards;
+}
+
+@keyframes nav_menu2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+button:hover > .menu2 {
+  animation: nav_menu2 1s forwards;
+}
+@keyframes nav_menu3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg) translate(6px, -8px);
+  }
+}
+
+button:hover > .menu3 {
+  animation: nav_menu3 1s forwards;
 }
 
 main {
