@@ -743,8 +743,8 @@ no se ocupara directamente en css, se combinara en js*/
   }
 
   button {
-    width: 7%;
-    max-width: 7%;
+    width: 10%;
+    max-width: 10%;
   }
 
   #img_perfil {
