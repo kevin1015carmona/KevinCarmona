@@ -105,7 +105,7 @@ button {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(0px, -2px);
   }
 }
 
@@ -120,16 +120,18 @@ button {
 
 @keyframes nav_menu3 {
   from {
+    opacity: 1;
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-45deg) translate(6px, -8px);
+    opacity: 0;
+    transform: rotate(-45deg) translate(9px, -11px);
   }
 }
 
 @keyframes nav_menu3_return {
   from {
-    transform: rotate(-45deg) translate(6px, -8px);
+    transform: rotate(-45deg) translate(9px, -11px);
   }
   to {
     transform: rotate(0deg);
