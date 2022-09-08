@@ -64,7 +64,7 @@ header {
 button {
   display: block;
   float: right;
-  margin: 5px 25px 0px 0px;
+  margin: 5px 4% 0px 0px;
   width: 5%;
   max-width: 5%;
   height: 75%;
@@ -119,11 +119,14 @@ button {
 }
 
 @keyframes nav_menu3 {
-  from {
+  0% {
     opacity: 1;
     transform: rotate(0deg);
   }
-  to {
+  95% {
+    opacity: 0;
+  }
+  100% {
     opacity: 0;
     transform: rotate(-45deg) translate(9px, -11px);
   }
@@ -131,9 +134,11 @@ button {
 
 @keyframes nav_menu3_return {
   from {
+    opacity: 0;
     transform: rotate(-45deg) translate(9px, -11px);
   }
   to {
+    opacity: 1;
     transform: rotate(0deg);
   }
 }
@@ -720,12 +725,22 @@ no se ocupara directamente en css, se combinara en js*/
   }
 }
 
-@media (min-width: 551px) and (max-width: 699px) {
+@media (min-width: 700px) and (max-width: 1000px) {
+  button {
+    width: 7%;
+    max-width: 7%;
+  }
+}
+@media (min-width: 670px) and (max-width: 699px) {
   #about {
     background-size: 160%;
   }
+  button {
+    width: 10%;
+    max-width: 10%;
+  }
 }
-@media (min-width: 100px) and (max-width: 550px) {
+@media (min-width: 100px) and (max-width: 670px) {
   body {
     height: 3000px;
     grid-template-rows: 2% 98%;
@@ -745,8 +760,8 @@ no se ocupara directamente en css, se combinara en js*/
   }
 
   button {
-    width: 15%;
-    max-width: 15%;
+    width: 12%;
+    max-width: 12%;
   }
 
   #img_perfil {

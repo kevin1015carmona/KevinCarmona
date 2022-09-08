@@ -7,23 +7,18 @@ window.addEventListener("load", function () {
   const boton = document.querySelector("#menu_button");
   var comprobar_menu = false;
   boton.addEventListener("click", function () {
-    if (
-      window.matchMedia("(min-width:551px)").matches &&
-      window.matchMedia("(max-width:2000px)").matches
-    ) {
-      if (comprobar_menu == false) {
-        menu1.style.animation = "nav_menu1 1s forwards";
-        menu2.style.animation = "nav_menu2 1s forwards";
-        menu3.style.animation = "nav_menu3 1s forwards";
-        menu.style.animation = "menu_expand 1s forwards";
-        comprobar_menu = true;
-      } else {
-        menu1.style.animation = "nav_menu1_return 1s forwards";
-        menu2.style.animation = "nav_menu2_return 1s forwards";
-        menu3.style.animation = "nav_menu3_return 1s  forwards";
-        menu.style.animation = "menu_contract 1s forwards";
-        comprobar_menu = false;
-      }
+    if (comprobar_menu == false) {
+      menu1.style.animation = "nav_menu1 .7s forwards";
+      menu2.style.animation = "nav_menu2 .7s forwards";
+      menu3.style.animation = "nav_menu3 .7s forwards";
+      menu.style.animation = "menu_expand .7s forwards";
+      comprobar_menu = true;
+    } else {
+      menu1.style.animation = "nav_menu1_return .7s forwards";
+      menu2.style.animation = "nav_menu2_return .7s forwards";
+      menu3.style.animation = "nav_menu3_return .7s  forwards";
+      menu.style.animation = "menu_contract .7s forwards";
+      comprobar_menu = false;
     }
   });
 
