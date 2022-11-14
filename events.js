@@ -204,34 +204,6 @@ window.addEventListener("load", function () {
     window.matchMedia("(min-width:100px)").matches &&
     window.matchMedia("(max-width:550px)").matches
   ) {
-    var comprobar_css = false;
-    var comprobar_camp = false;
-    css.addEventListener("click", function () {
-      if (comprobar_css == false || comprobar_camp == true) {
-        img_camp.style.animation = "img_out 0.5s forwards";
-        img_udemy.style.animation = "img_hover 0.5s forwards";
-        comprobar_css = true;
-        comprobar_camp = false;
-      } else if (comprobar_css == true || comprobar_camp == false) {
-        console.log(comprobar_css);
-        img_udemy.style.animation = "img_out 0.5s forwards";
-        comprobar_css = false;
-      }
-    });
-
-    responsive.addEventListener("click", function () {
-      comprobar_css = true;
-      console.log("valor de css= " + comprobar_css);
-      if (comprobar_camp == false || comprobar_css == true) {
-        img_udemy.style.animation = "img_out 0.5s forwards";
-        img_camp.style.animation = "img_hover 0.5s forwards";
-        comprobar_camp = true;
-      } else if (comprobar_camp == true || comprobar_css == false) {
-        img_camp.style.animation = "img_out 0.5s forwards";
-        comprobar_camp = false;
-      }
-    });
-
     window.addEventListener("scroll", function () {
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
