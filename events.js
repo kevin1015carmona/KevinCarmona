@@ -24,7 +24,6 @@ window.addEventListener("load", function () {
 
   var about = document.querySelector("#perfil_description");
   var img_perfil = document.querySelector("#perfil");
-  const social_wrap = document.querySelector("#white_background");
   //se crea una funcion para que cuando se cargue la pagina se
   //muestren elmcontenido de main> about
 
@@ -116,7 +115,6 @@ window.addEventListener("load", function () {
       //animation of img
       about.style.animation = "animation_about 1.5s forwards";
       img_perfil.style.animation = "animation_img 1.5s forwards";
-      social_wrap.style.animation = "animation_img 1.5s forwards";
       /////////////////////////////////
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
@@ -238,7 +236,6 @@ window.addEventListener("load", function () {
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
       img_perfil.style.animation = "left_right 1.5s forwards";
-      social_wrap.style.animation = "right_left 1.5s forwards";
       about.style.animation = "down_up 1.5s forwards";
       if (altura >= 300) {
         css.style.animation = "right_left 1.5s forwards ";

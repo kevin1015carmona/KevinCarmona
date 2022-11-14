@@ -230,7 +230,7 @@ span > a {
   grid-row: 1/2;
   display: grid;
   grid-template-columns: 35% 65%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 55% 45%;
   object-fit: fill;
 }
 
@@ -248,20 +248,21 @@ span > a {
   grid-column: 1/2;
   overflow-y: hidden;
   overflow-x: hidden;
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #perfil {
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 30px 30px 30px 30px;
   opacity: 0;
   width: 45%;
   height: 80%;
   grid-column: 1/2;
   justify-self: center;
-  -webkit-box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
-  -moz-box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
-  box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
+  box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
 }
 
 #about_description {
@@ -314,7 +315,6 @@ span > a {
 #section_tecnologias {
   grid-row: 2/3;
   grid-column: 1/3;
-  display: flex;
   display: grid;
   grid-template-columns: repeat(4, 25%);
   grid-template-rows: 20% 80%;
@@ -330,7 +330,6 @@ span > a {
 
 .exp {
   color: white;
-  padding: 2% 5%;
 }
 
 .exp > ul {
@@ -714,28 +713,7 @@ span > a {
   }
 }
 
-@media (min-width: 700px) and (max-width: 1000px) {
-  button {
-    width: 7%;
-    max-width: 7%;
-  }
-  span:active {
-    animation: menu_color 1s forwards;
-  }
-}
-@media (min-width: 670px) and (max-width: 699px) {
-  #about {
-    background-size: 160%;
-  }
-  button {
-    width: 10%;
-    max-width: 10%;
-  }
-  span:active {
-    animation: menu_color 1s forwards;
-  }
-}
-@media (min-width: 100px) and (max-width: 670px) {
+@media (min-width: 500px) and (max-width: 799px) {
   body {
     height: 3000px;
     grid-template-rows: 2% 98%;
@@ -746,13 +724,7 @@ span > a {
   #about {
     background-size: 100%;
     background-repeat: repeat-y;
-    height: 12%;
-    margin-top: 10%;
-  }
-  .of_about {
-    grid-template-columns: 100%;
-    grid-template-rows: 60% 40%;
-    background-color: rgb(0 0 0 / 82%);
+    height: 15%;
   }
 
   button {
@@ -763,18 +735,18 @@ span > a {
     animation: menu_color 1s forwards;
   }
 
+  #section_perfil {
+    grid-template-columns: 20% 80%;
+  }
+
   #img_perfil {
     grid-row: 1/2;
     opacity: 1;
-    grid-template-columns: 65% 35%;
-    grid-template-rows: 100%;
   }
   #perfil {
-    height: 95%;
-    width: 55%;
+    height: 80%;
+    width: 70%;
     border-radius: 160px 160px 160px 160px;
-    grid-column: 1/2;
-    grid-row: 1/2;
   }
 
   @keyframes left_right {
@@ -786,18 +758,6 @@ span > a {
       margin-left: 0%;
       opacity: 1;
     }
-  }
-
-  #white_background {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    display: flex;
-  }
-
-  .social_img {
-    width: 25px;
-    height: 25px;
-    margin: 0%;
   }
 
   @keyframes right_left {
@@ -812,12 +772,24 @@ span > a {
   }
 
   #about_description {
-    grid-column: 1/2;
-    grid-row: 2/3;
     opacity: 1;
-    margin: 0% 7% 0% 7%;
-    height: 100%;
+    margin: 2% 2% 0% 2%;
   }
+
+  #about_description > h1 {
+    font-size: 12px;
+  }
+
+  /*SECTION_TECNOLOGIAS*/
+
+  .exp > ul {
+    font-size: 18px;
+  }
+
+  .exp > li {
+    font-size: 11px;
+  }
+
   #certifications > h1 {
     height: 10%;
   }
@@ -825,12 +797,14 @@ span > a {
     height: 90%;
     grid-template-columns: 100%;
     grid-template-rows: 30% 30% 30%;
-    row-gap: 5%;
+    row-gap: 1%;
     opacity: 1;
+    justify-items: center;
   }
 
   .certification_img {
     opacity: 0;
+    width: 70%;
   }
 
   .css {
@@ -869,11 +843,12 @@ span > a {
     height: 90%;
     grid-template-columns: 100%;
     grid-template-rows: 30% 30% 30%;
-    row-gap: 5%;
+    justify-items: center;
+    row-gap: 1%;
     opacity: 1;
   }
   .projects_img {
-    width: 98%;
+    width: 70%;
     opacity: 0;
   }
   .one {
@@ -889,4 +864,57 @@ span > a {
     grid-row: 3/4;
   }
 }
+
+@media (min-width: 0px) and (max-width: 499px) {
+  @keyframes left_right {
+    from {
+      margin-left: -100%;
+      opacity: 0;
+    }
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes right_left {
+    from {
+      margin-left: 100%;
+      opacity: 0;
+    }
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
+  }
+  .of_about {
+    grid-template-rows: 25% 35% 30%;
+    grid-template-columns: 50% 50%;
+  }
+
+  #section_perfil {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 40% 60%;
+    display: block;
+  }
+
+  #img_perfil {
+    height: 40%;
+    width: 25%;
+    float: left;
+  }
+
+  #perfil {
+    height: 100%;
+    width: 100%;
+  }
+
+  #section_tecnologias {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+}
+
 /*RESPONSIVE DESIGN END*/
