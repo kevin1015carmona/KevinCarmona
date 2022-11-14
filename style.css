@@ -904,11 +904,19 @@ span > a {
     height: 40%;
     width: 25%;
     float: left;
+    margin: 0% 5% 5% 0%;
   }
 
   #perfil {
     height: 100%;
     width: 100%;
+  }
+
+  #perfil_description {
+    color: white;
+    font-size: 13px;
+    text-align: justify;
+    padding: 5px;
   }
 
   #section_tecnologias {
