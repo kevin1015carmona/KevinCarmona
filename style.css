@@ -8,7 +8,7 @@ a {
 
 body {
   display: grid;
-  grid-template-rows: 3% 97%;
+  grid-template-rows: 2% 98%;
   height: 2250px;
   width: 100vw;
   background-image: url(imagenes/pattern.png);
@@ -23,11 +23,7 @@ body {
 }
 
 .of_header {
-  /*REDUCIMOS LA OPACIDAD DEL LAYER PARA QUE EL
-  FONDO SE PUEDA APRECIAR MEJOR */
   background-color: rgba(0 0 0 /30%);
-  /*REDUCIMOS LA OPACIDAD DEL LAYER PARA QUE EL
-  FONDO SE PUEDA APRECIAR MEJOR */
   -webkit-box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
   -moz-box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
   box-shadow: 0px 0px 18px 10px rgba(59, 35, 125, 0.9);
@@ -58,10 +54,10 @@ header {
 
 .of_header > h1 {
   color: white;
-  height: 100%;
   float: left;
-  margin: 5px 0px 0px 5px;
+  margin: 5px 0px 0px 10px;
   text-align: center;
+  font-size: 27px;
 }
 
 button {
@@ -232,10 +228,12 @@ span > a {
   grid-template-columns: 35% 65%;
   grid-template-rows: 55% 45%;
   object-fit: fill;
+  background-color: rgb(0 0 0 / 80%);
 }
 
 #section_perfil {
   grid-column: 1/3;
+  padding: 3% 3% 0% 3%;
 }
 
 #img_perfil {
@@ -250,12 +248,12 @@ span > a {
 #perfil {
   border-radius: 30px 30px 30px 30px;
   opacity: 0;
-  width: 25%;
-  height: 75%;
+  width: 15%;
+  height: 80%;
   grid-column: 1/2;
   justify-self: center;
   float: left;
-  margin: 1% 2% 1% 2%;
+  margin-right: 3%;
   -webkit-box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
   -moz-box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
   box-shadow: 0px 0px 15px 5px rgba(59, 35, 125, 0.9);
@@ -264,9 +262,9 @@ span > a {
 #perfil_description {
   color: white;
   font-size: 14px;
-  width: 90%;
+  width: 100%;
   text-align: justify;
-  padding: 5px;
+  line-height: 130%;
 }
 
 #perfil_description > a {
@@ -597,7 +595,7 @@ span > a {
     height: 60%;
   }
   #about {
-    margin-top: 10%;
+    margin-top: 3%;
     height: 20%;
   }
   #deslizar_div {
@@ -712,8 +710,8 @@ span > a {
   }
 
   button {
-    width: 12%;
-    max-width: 12%;
+    width: 8%;
+    max-width: none;
   }
   span:active {
     animation: menu_color 1s forwards;
@@ -731,6 +729,7 @@ span > a {
 
   #perfil_description {
     font-size: 12px;
+    line-height: 125%;
   }
 
   #section_tecnologias {
@@ -899,6 +898,11 @@ span > a {
     font-size: 23px;
   }
 
+  button {
+    width: 10%;
+    max-width: 12%;
+  }
+
   body {
     grid-template-rows: 2% 98%;
     height: 2800px;
@@ -916,11 +920,16 @@ span > a {
     grid-row: 1/2;
   }
 
+  #perfil {
+    height: 50%;
+  }
+
   #perfil_description {
     color: white;
-    font-size: 11.5px;
+    font-size: 11px;
     text-align: justify;
     padding: 5px;
+    line-height: 135%;
   }
 
   #section_tecnologias {
@@ -941,7 +950,7 @@ span > a {
   }
 
   .exp > li {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .exp {
