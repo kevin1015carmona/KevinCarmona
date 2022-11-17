@@ -975,13 +975,27 @@ span > a {
   }
 
   #deslizar_div {
+    height: 5%;
+  }
+  .deslizar_img > img {
+    height: 70%;
+    width: 10%;
+  }
+
+  #certifications {
+    height: 30%;
+  }
+
+  #certifications > h1 {
     height: 7%;
   }
+
   #certification_log_wrap {
     opacity: 1;
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, 1fr);
     column-gap: 0%;
+    height: 93%;
   }
   .certification_img {
     grid-column: 1/2;
@@ -994,6 +1008,37 @@ span > a {
   }
   .figma {
     grid-row: 3/4;
+  }
+
+  #projects {
+    height: 30%;
+  }
+
+  #projects > h1 {
+    height: 7%;
+  }
+
+  #projects_wrap {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    opacity: 1;
+    height: 93%;
+  }
+  .one {
+    grid-row: 1/2;
+  }
+  #projects_wrap > .two {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #projects_wrap > .three {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  footer {
+    height: 2%;
+    background-color: red;
   }
 }
 

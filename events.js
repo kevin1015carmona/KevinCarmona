@@ -209,24 +209,22 @@ window.addEventListener("load", function () {
       console.log(altura);
       img_perfil.style.animation = "left_right 1.5s forwards";
       about.style.animation = "down_up 1.5s forwards";
-      if (altura >= 300) {
+      if (altura >= 530) {
         css.style.animation = "right_left 1.5s forwards ";
       }
-
-      if (altura >= 600) {
+      if (altura >= 790) {
         responsive.style.animation = "left_right 1.5s forwards";
       }
-      if (altura >= 900) {
-        console.log("test");
+      if (altura >= 1030) {
         figma.style.animation = " right_left 1.5s forwards";
       }
-      if (altura >= 1500) {
+      if (altura >= 1530) {
         type_blog.style.animation = "left_right 1.5s forwards";
       }
-      if (altura >= 1800) {
+      if (altura >= 1770) {
         contact.style.animation = "right_left 1.5s forwards";
       }
-      if (altura >= 2150) {
+      if (altura >= 2010) {
         three.style.animation = "left_right 1.5s forwards";
       }
     });
