@@ -8,7 +8,7 @@ a {
 
 body {
   display: grid;
-  grid-template-rows: 2% 98%;
+  grid-template-rows: 2.5% 97.5%;
   height: 2250px;
   width: 100vw;
   background-image: url(imagenes/pattern.png);
@@ -545,7 +545,6 @@ span > a {
   column-gap: 3%;
   padding-left: 3%;
   padding-right: 3%;
-  opacity: 0%;
 }
 
 .projects_img {
@@ -583,7 +582,7 @@ span > a {
   box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
 }
 
-/*START FOOTER SECTION*/
+/*START  SECTION*/
 
 /*RESPONSIVE DESIGN START*/
 
@@ -1023,6 +1022,8 @@ span > a {
     grid-template-rows: repeat(3, 1fr);
     opacity: 1;
     height: 93%;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
   .one {
     grid-row: 1/2;
@@ -1034,11 +1035,6 @@ span > a {
   #projects_wrap > .three {
     grid-column: 1/2;
     grid-row: 3/4;
-  }
-
-  footer {
-    height: 2%;
-    background-color: red;
   }
 }
 

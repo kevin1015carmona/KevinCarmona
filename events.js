@@ -122,82 +122,8 @@ window.addEventListener("load", function () {
       if (altura >= 500) {
         certification_log_wrap.style.animation = "down_up 1s forwards";
       }
-
-      if (altura >= 250 && altura <= 300) {
-        css.style.opacity = "0.25";
-        responsive.style.opacity = "0.25";
-        figma.style.opacity = "0.25";
-      } else if (altura >= 301 && altura <= 330) {
-        css.style.opacity = "0.5";
-        responsive.style.opacity = "0.5";
-        figma.style.opacity = "0.5";
-      } else if (altura >= 351 && altura <= 400) {
-        css.style.opacity = "0.75";
-        responsive.style.opacity = "0.75";
-        figma.style.opacity = "0.75";
-      } else if (altura >= 401 && altura <= 875) {
-        css.style.opacity = "1";
-        responsive.style.opacity = "1";
-        figma.style.opacity = "1";
-      }
-      //Pendiente revisar porque no cambia opacidad
-      //Desaparicion deslizar arriba => abajo
-      else if (altura <= 875) {
-        css.style.opacity = "1";
-        responsive.style.opacity = "1";
-        figma.style.opacity = "1";
-      } else if (altura >= 876 && altura <= 976) {
-        css.style.opacity = "0.75";
-        responsive.style.opacity = "0.75";
-        figma.style.opacity = "0.75";
-      } else if (altura >= 1043 && altura <= 1110) {
-        css.style.opacity = "0.5";
-        responsive.style.opacity = "0.5";
-        figma.style.opacity = "0.5";
-      } else if (altura >= 1111 && altura <= 2000) {
-        css.style.opacity = "0.25";
-        responsive.style.opacity = "0.25";
-        figma.style.opacity = "0.25";
-      }
-      //Aparicion de abajo hacia arriba
-      if (altura >= 1111 && altura <= 2000) {
-        css.style.opacity = "0.25";
-        responsive.style.opacity = "0.25";
-        figma.style.opacity = "0.25";
-      } else if (altura >= 1043 && altura <= 1110) {
-        css.style.opacity = "0.5";
-        responsive.style.opacity = "0.5";
-        figma.style.opacity = "0.5";
-      } else if (altura >= 876 && altura <= 976) {
-        css.style.opacity = "0.75";
-        responsive.style.opacity = "0.75";
-        figma.style.opacity = "0.75";
-      } else if (altura <= 875) {
-        css.style.opacity = "1";
-        responsive.style.opacity = "1";
-        figma.style.opacity = "1";
-      }
-      ///////////////////////
-
-      if (altura >= 1100) {
+      if (altura >= 1220) {
         projects_wrap.style.animation = "down_up 1s forwards";
-      }
-      if (altura >= 910 && altura <= 940) {
-        type_blog.style.opacity = "0.25";
-        contact.style.opacity = "0.25";
-        three.style.opacity = "0.25";
-      } else if (altura >= 941 && altura <= 976) {
-        type_blog.style.opacity = "0.5";
-        contact.style.opacity = "0.5";
-        three.style.opacity = "0.5";
-      } else if (altura >= 942 && altura <= 1043) {
-        type_blog.style.opacity = "0.75";
-        contact.style.opacity = "0.75";
-        three.style.opacity = "0.75";
-      } else if (altura >= 1044 && altura <= 1343) {
-        type_blog.style.opacity = "1";
-        contact.style.opacity = "1";
-        three.style.opacity = "1";
       }
     });
   } else if (
