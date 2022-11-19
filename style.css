@@ -206,6 +206,10 @@ span:hover {
   align-items: center;
 }
 
+#menu > span:last-of-type {
+  display: none;
+}
+
 span > a {
   color: white;
   width: 30%;
@@ -541,7 +545,7 @@ span > a {
 #projects_wrap {
   height: 80%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 3%;
   padding-left: 3%;
   padding-right: 3%;
@@ -563,7 +567,7 @@ span > a {
 }
 
 #projects_wrap > .three {
-  grid-column: 3/4;
+  display: none;
 }
 
 .projects_img > div:last-of-type {
@@ -665,10 +669,8 @@ span > a {
   #projects_wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-      "one two"
-      "three three";
+    grid-template-rows: 100%;
+    grid-template-areas: "one two";
   }
 
   #projects_wrap > .one {
@@ -847,7 +849,7 @@ span > a {
   #projects_wrap {
     height: 90%;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 30% 30%;
+    grid-template-rows: 48% 48%;
     justify-items: center;
     row-gap: 1%;
     opacity: 1;
@@ -992,12 +994,13 @@ span > a {
   #certification_log_wrap {
     opacity: 1;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 33% 33% 33%;
     column-gap: 0%;
     height: 93%;
   }
   .certification_img {
     grid-column: 1/2;
+    opacity: 0;
   }
   .css {
     grid-row: 1/2;
@@ -1019,7 +1022,7 @@ span > a {
 
   #projects_wrap {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     opacity: 1;
     height: 93%;
     overflow-y: visible;
@@ -1027,10 +1030,12 @@ span > a {
   }
   .one {
     grid-row: 1/2;
+    width: 100%;
   }
   #projects_wrap > .two {
     grid-column: 1/2;
     grid-row: 2/3;
+    width: 100%;
   }
   #projects_wrap > .three {
     grid-column: 1/2;

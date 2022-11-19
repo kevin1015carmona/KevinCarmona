@@ -65,7 +65,7 @@ window.addEventListener("load", function () {
 
   //Efectos de agrandamiento secciones Certificacion y Proyectos
   if (
-    window.matchMedia("(min-width:551px)").matches &&
+    window.matchMedia("(min-width:800px)").matches &&
     window.matchMedia("(max-width:2000px)").matches
   ) {
     css.addEventListener("mouseover", function () {
@@ -127,8 +127,8 @@ window.addEventListener("load", function () {
       }
     });
   } else if (
-    window.matchMedia("(min-width:100px)").matches &&
-    window.matchMedia("(max-width:550px)").matches
+    window.matchMedia("(min-width:000px)").matches &&
+    window.matchMedia("(max-width:799px)").matches
   ) {
     window.addEventListener("scroll", function () {
       const altura = parseInt(window.pageYOffset);
