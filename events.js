@@ -68,6 +68,7 @@ window.addEventListener("load", function () {
     window.matchMedia("(min-width:800px)").matches &&
     window.matchMedia("(max-width:2000px)").matches
   ) {
+    /* 
     css.addEventListener("mouseover", function () {
       img_udemy.style.animation = "img_hover 0.5s forwards";
     });
@@ -108,7 +109,7 @@ window.addEventListener("load", function () {
     });
     three.addEventListener("mouseout", function () {
       img_three.style.animation = "img_out 0.5s forwards";
-    });
+    }); */
     //
     window.addEventListener("scroll", function () {
       //ubicar el min del punto de corte (matchMedia)
@@ -120,7 +121,7 @@ window.addEventListener("load", function () {
       console.log(altura);
 
       if (altura >= 500) {
-        certification_log_wrap.style.animation = "down_up 1s forwards";
+        //certification_log_wrap.style.animation = "down_up 1s forwards";
       }
       if (altura >= 1220) {
         projects_wrap.style.animation = "down_up 1s forwards";

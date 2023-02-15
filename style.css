@@ -60,7 +60,7 @@ header {
   font-size: 27px;
 }
 
-button {
+#menu_button {
   display: block;
   float: right;
   margin: 5px 4% 0px 0px;
@@ -371,23 +371,74 @@ span > a {
 #certifications {
   height: 24%;
   overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 4vw 92vw 4vw;
+  grid-template-rows: 10% 90%;
 }
 
 #certifications > h1 {
   height: 17%;
   text-align: center;
+  grid-column: 1/4;
 }
 
 #certification_log_wrap {
   height: 83%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+  column-gap: 3vw;
+  display: -webkit-inline-box;
   overflow-y: visible;
-  opacity: 0%;
-  overflow-x: hidden;
+}
+
+/*ANIMACIONES PASARELA DE CERTIFICADOS */
+
+@keyframes first_click_forwards {
+  from {
+    margin-left: 0vw;
+  }
+  to {
+    margin-left: -56vw;
+  }
+}
+
+@keyframes second_click_forwards {
+  from {
+    margin-left: -56vw;
+  }
+  to {
+    margin-left: -95vw;
+  }
+}
+
+@keyframes first_click_back {
+  from {
+    margin-left: -56vw;
+  }
+  to {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes second_click_back {
+  from {
+    margin-left: -95vw;
+  }
+  to {
+    margin-left: -56vw;
+  }
+}
+
+/*ANIMACIONES PASARELA DE CERTIFICADOS */
+
+#certifications::-webkit-scrollbar {
+  display: none;
+}
+
+#certifications > button {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
 }
 
 @keyframes down_up {
@@ -402,10 +453,12 @@ span > a {
 }
 
 .certification_img {
-  width: 100%;
+  width: 35vw;
+  height: 100%;
   display: grid;
   grid-template-rows: 70% 30%;
   row-gap: 2%;
+  float: left;
 }
 
 .css {
@@ -474,7 +527,9 @@ span > a {
 
 .css > div:first-of-type,
 .responsive > div:first-of-type,
-.figma > div:first-of-type {
+.figma > div:first-of-type,
+.scrum > div:first-of-type,
+.oracle > div:first-of-type {
   max-height: 100%;
   max-width: 100%;
   display: flex;
@@ -485,12 +540,14 @@ span > a {
 
 #udemy,
 #responsive,
-#figma {
+#figma,
+#scrum,
+#oracle {
   -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   border-radius: 3%;
-  height: 85%;
-  width: 85%;
+  height: 90%;
+  width: 95%;
 }
 
 .img_title {
@@ -710,7 +767,7 @@ span > a {
     height: 15%;
   }
 
-  button {
+  #menu_button {
     width: 8%;
     max-width: none;
   }
@@ -899,7 +956,7 @@ span > a {
     font-size: 23px;
   }
 
-  button {
+  #menu_button {
     width: 10%;
     max-width: 12%;
   }
