@@ -119,13 +119,6 @@ window.addEventListener("load", function () {
       /////////////////////////////////
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
-
-      if (altura >= 500) {
-        //certification_log_wrap.style.animation = "down_up 1s forwards";
-      }
-      if (altura >= 1220) {
-        projects_wrap.style.animation = "down_up 1s forwards";
-      }
     });
   } else if (
     window.matchMedia("(min-width:000px)").matches &&
@@ -136,24 +129,6 @@ window.addEventListener("load", function () {
       console.log(altura);
       img_perfil.style.animation = "left_right 1.5s forwards";
       about.style.animation = "down_up 1.5s forwards";
-      if (altura >= 530) {
-        css.style.animation = "right_left 1.5s forwards ";
-      }
-      if (altura >= 790) {
-        responsive.style.animation = "left_right 1.5s forwards";
-      }
-      if (altura >= 1030) {
-        figma.style.animation = " right_left 1.5s forwards";
-      }
-      if (altura >= 1530) {
-        type_blog.style.animation = "left_right 1.5s forwards";
-      }
-      if (altura >= 1770) {
-        contact.style.animation = "right_left 1.5s forwards";
-      }
-      if (altura >= 2010) {
-        three.style.animation = "left_right 1.5s forwards";
-      }
     });
   }
 

@@ -569,6 +569,9 @@ span > a {
 
 /*START PROJECTS SECTION*/
 #projects {
+  display: grid;
+  grid-template-columns: 4vw 92vw 4vw;
+  grid-template-rows: 10% 90%;
   height: 26%;
   overflow-y: hidden;
 }
@@ -592,7 +595,7 @@ span > a {
 }
 
 #projects > h1 {
-  height: 20%;
+  grid-column: 1/4;
   text-align: center;
   display: flex;
   align-items: center;
@@ -606,6 +609,17 @@ span > a {
   column-gap: 3%;
   padding-left: 3%;
   padding-right: 3%;
+}
+
+#projects::-webkit-scrollbar {
+  display: none;
+}
+
+#projects > button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
 }
 
 .projects_img {
@@ -822,28 +836,6 @@ span > a {
     grid-row: 3/4;
   }
 
-  @keyframes left_right {
-    from {
-      margin-left: -100%;
-      opacity: 0;
-    }
-    to {
-      margin-left: 0%;
-      opacity: 1;
-    }
-  }
-
-  @keyframes right_left {
-    from {
-      margin-left: 100%;
-      opacity: 0;
-    }
-    to {
-      margin-left: 0%;
-      opacity: 1;
-    }
-  }
-
   /*SECTION_TECNOLOGIAS*/
 
   .exp > ul {
@@ -930,28 +922,6 @@ span > a {
 }
 
 @media (min-width: 0px) and (max-width: 499px) {
-  @keyframes left_right {
-    from {
-      margin-left: -100%;
-      opacity: 0;
-    }
-    to {
-      margin-left: 0%;
-      opacity: 1;
-    }
-  }
-
-  @keyframes right_left {
-    from {
-      margin-left: 100%;
-      opacity: 0;
-    }
-    to {
-      margin-left: 0%;
-      opacity: 1;
-    }
-  }
-
   .of_header > h1 {
     font-size: 23px;
   }
