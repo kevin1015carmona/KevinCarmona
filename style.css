@@ -427,6 +427,15 @@ span > a {
   }
 }
 
+@keyframes return_click {
+  from {
+    margin-left: -95vw;
+  }
+  to {
+    margin-left: 0vw;
+  }
+}
+
 /*ANIMACIONES PASARELA DE CERTIFICADOS */
 
 #certifications::-webkit-scrollbar {
@@ -590,8 +599,8 @@ span > a {
   -webkit-box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.81);
   border-radius: 10%;
-  height: 85%;
-  width: 85%;
+  height: 90%;
+  width: 95%;
 }
 
 #projects > h1 {
@@ -604,11 +613,8 @@ span > a {
 
 #projects_wrap {
   height: 80%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 3%;
-  padding-left: 3%;
-  padding-right: 3%;
+  display: -webkit-inline-box;
+  column-gap: 5vw;
 }
 
 #projects::-webkit-scrollbar {
@@ -624,17 +630,10 @@ span > a {
 
 .projects_img {
   height: 100%;
+  width: 35vw;
   display: grid;
   grid-template-rows: 70% 30%;
   row-gap: 2%;
-}
-
-#projects_wrap > .one {
-  grid-column: 1/2;
-}
-
-#projects_wrap > .two {
-  grid-column: 2/3;
 }
 
 #projects_wrap > .three {
@@ -663,14 +662,14 @@ span > a {
 
 @media (min-width: 800px) and (max-width: 1100px) {
   body {
-    height: 2500px;
+    height: 2250px;
   }
   #perfil {
     height: 60%;
   }
   #about {
     margin-top: 3%;
-    height: 20%;
+    height: 24%;
   }
   #deslizar_div {
     height: 10%;
@@ -679,7 +678,7 @@ span > a {
     height: 90%;
   }
   #certifications {
-    height: 32%;
+    height: 28%;
   }
   #certifications > h1 {
     height: 11%;
@@ -687,38 +686,94 @@ span > a {
   #certification_log_wrap {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50% 50%;
-    grid-template-areas:
-      "css responsive"
-      "figma figma";
     height: 93%;
   }
-  .css {
-    margin-left: 5%;
-    width: 90%;
-    height: 90%;
-    grid-area: css;
+
+  .certification_img {
+    width: 45vw;
+    grid-template-rows: 75% 25%;
   }
-  .responsive {
-    margin-left: 5%;
-    width: 90%;
-    height: 90%;
-    grid-area: responsive;
+
+  /*ANIMACIONES PASARELA DE CERTIFICADOS */
+
+  @keyframes first_click_forwards {
+    from {
+      margin-left: 0vw;
+    }
+    to {
+      margin-left: -56vw;
+    }
   }
-  .figma {
-    margin-left: 27%;
-    width: 45%;
-    height: 90%;
-    grid-area: figma;
+
+  @keyframes second_click_forwards {
+    from {
+      margin-left: -56vw;
+    }
+    to {
+      margin-left: -95vw;
+    }
   }
+
+  @keyframes three_click_forwards {
+    from {
+      margin-left: -95vw;
+    }
+    to {
+      margin-left: -145vw;
+    }
+  }
+
+  @keyframes first_click_back {
+    from {
+      margin-left: -56vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  @keyframes second_click_back {
+    from {
+      margin-left: -95vw;
+    }
+    to {
+      margin-left: -56vw;
+    }
+  }
+
+  @keyframes three_click_back {
+    from {
+      margin-left: -145vw;
+    }
+    to {
+      margin-left: -95vw;
+    }
+  }
+
+  @keyframes return_click {
+    from {
+      margin-left: -145vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  /*ANIMACIONES PASARELA DE CERTIFICADOS */
+
   .css > div:first-of-type,
   .responsive > div:first-of-type,
-  .figma > div:first-of-type {
+  .figma > div:first-of-type,
+  .scrum > div:first-of-type,
+  .oracle > div:first-of-type {
     max-height: 90%;
     max-width: 90%;
   }
   #udemy,
   #responsive,
-  #figma {
+  #figma,
+  #scrum,
+  #oracle {
     border-radius: 10%;
     height: 90%;
     width: 90%;
@@ -730,7 +785,7 @@ span > a {
   }
   /**/
   #projects {
-    height: 32%;
+    height: 28%;
   }
   #projects > h1 {
     height: 11%;
@@ -769,8 +824,8 @@ span > a {
 
 @media (min-width: 500px) and (max-width: 799px) {
   body {
-    height: 3000px;
-    grid-template-rows: 2% 98%;
+    height: 2000px;
+    grid-template-rows: 2.5% 97.5%;
   }
   .of_header {
     font-size: 10px;
@@ -778,7 +833,7 @@ span > a {
   #about {
     background-size: 100%;
     background-repeat: repeat-y;
-    height: 15%;
+    height: 25%;
   }
 
   #menu_button {
@@ -856,13 +911,60 @@ span > a {
     row-gap: 1%;
     opacity: 1;
     justify-items: center;
+    column-gap: 5vw;
   }
 
   .certification_img {
-    opacity: 0;
-    width: 70%;
+    width: 38vw;
+  }
+  /*---------------------*/
+
+  @keyframes first_click_forwards {
+    from {
+      margin-left: 0vw;
+    }
+    to {
+      margin-left: -80vw;
+    }
   }
 
+  @keyframes second_click_forwards {
+    from {
+      margin-left: -80vw;
+    }
+    to {
+      margin-left: -120vw;
+    }
+  }
+
+  @keyframes first_click_back {
+    from {
+      margin-left: -80vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  @keyframes second_click_back {
+    from {
+      margin-left: -120vw;
+    }
+    to {
+      margin-left: -80vw;
+    }
+  }
+
+  @keyframes return_click {
+    from {
+      margin-left: -120vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  /*---------------------*/
   .css {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -882,42 +984,28 @@ span > a {
   .deslizar_img > img {
     height: 100%;
   }
-  #certifications {
-    height: 36%;
+  #deslizar_div {
+    height: 8%;
   }
 
-  #deslizar_div {
-    height: 6%;
+  #certifications {
+    height: 29%;
   }
+
   #projects {
-    height: 36%;
-  }
-  #projects > h1 {
-    height: 10%;
+    height: 29%;
   }
   #projects_wrap {
-    height: 90%;
+    height: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 48% 48%;
     justify-items: center;
     row-gap: 1%;
     opacity: 1;
   }
+
   .projects_img {
-    width: 70%;
-    opacity: 0;
-  }
-  .one {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  #projects_wrap > .two {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  #projects_wrap > .three {
-    grid-column: 1/2;
-    grid-row: 3/4;
+    width: 38vw;
   }
 }
 
@@ -933,10 +1021,10 @@ span > a {
 
   body {
     grid-template-rows: 2% 98%;
-    height: 2800px;
+    height: 1900px;
   }
   #about {
-    height: 28%;
+    height: 32%;
   }
   .of_about {
     grid-template-rows: 35% 65%;
@@ -1003,7 +1091,7 @@ span > a {
   }
 
   #deslizar_div {
-    height: 5%;
+    height: 8%;
   }
   .deslizar_img > img {
     height: 70%;
@@ -1011,7 +1099,7 @@ span > a {
   }
 
   #certifications {
-    height: 30%;
+    height: 25%;
   }
 
   #certifications > h1 {
@@ -1022,12 +1110,12 @@ span > a {
     opacity: 1;
     grid-template-columns: 100%;
     grid-template-rows: 33% 33% 33%;
-    column-gap: 0%;
+    column-gap: 5vw;
     height: 93%;
   }
   .certification_img {
     grid-column: 1/2;
-    opacity: 0;
+    width: 43vw;
   }
   .css {
     grid-row: 1/2;
@@ -1039,12 +1127,61 @@ span > a {
     grid-row: 3/4;
   }
 
-  #projects {
-    height: 30%;
+  .img_title {
+    font-size: 8px;
   }
 
-  #projects > h1 {
-    height: 7%;
+  /*---------------------*/
+
+  @keyframes first_click_forwards {
+    from {
+      margin-left: 0vw;
+    }
+    to {
+      margin-left: -95vw;
+    }
+  }
+
+  @keyframes second_click_forwards {
+    from {
+      margin-left: -95vw;
+    }
+    to {
+      margin-left: -145vw;
+    }
+  }
+
+  @keyframes first_click_back {
+    from {
+      margin-left: -95vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  @keyframes second_click_back {
+    from {
+      margin-left: -145vw;
+    }
+    to {
+      margin-left: -95vw;
+    }
+  }
+
+  @keyframes return_click {
+    from {
+      margin-left: -145vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+
+  /*---------------------*/
+
+  #projects {
+    height: 25%;
   }
 
   #projects_wrap {
@@ -1055,18 +1192,9 @@ span > a {
     overflow-y: visible;
     overflow-x: hidden;
   }
-  .one {
-    grid-row: 1/2;
-    width: 100%;
-  }
-  #projects_wrap > .two {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    width: 100%;
-  }
-  #projects_wrap > .three {
-    grid-column: 1/2;
-    grid-row: 3/4;
+
+  .projects_img {
+    width: 43vw;
   }
 }
 
