@@ -127,7 +127,7 @@ window.addEventListener("load", function () {
     window.addEventListener("scroll", function () {
       const altura = parseInt(window.pageYOffset);
       console.log(altura);
-      img_perfil.style.animation = "left_right 1.5s forwards";
+      img_perfil.style.animation = "animation_img 1.5s forwards";
       about.style.animation = "down_up 1.5s forwards";
     });
   }

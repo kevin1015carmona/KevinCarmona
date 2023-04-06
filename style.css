@@ -832,7 +832,6 @@ span > a {
     font-size: 10px;
   }
   #about {
-    background-size: 100%;
     background-repeat: repeat-y;
     height: 25%;
   }
@@ -856,7 +855,7 @@ span > a {
   }
 
   #perfil_description {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 125%;
   }
 
@@ -1046,6 +1045,7 @@ span > a {
   }
   #about {
     height: 32%;
+    background-size: 150%;
   }
   .of_about {
     grid-template-rows: 35% 65%;
@@ -1058,12 +1058,12 @@ span > a {
   }
 
   #perfil {
-    height: 50%;
+    height: 70%;
   }
 
   #perfil_description {
     color: white;
-    font-size: 11.5px;
+    font-size: 12px;
     text-align: justify;
     line-height: 120%;
   }
@@ -1230,9 +1230,26 @@ span > a {
   span > a {
     font-size: 22px;
   }
+  #perfil {
+    height: 60%;
+    width: 20%;
+  }
+
+  #perfil_description {
+    font-size: 11px;
+  }
+  #section_tecnologias > h3 {
+    font-size: 16px;
+  }
+  .exp > ul {
+    font-size: 13px;
+  }
+  .exp > li {
+    font-size: 11px;
+  }
 }
 
-@media (min-width: 0px) and (max-width: 350px) {
+@media (min-width: 0px) and (max-width: 378px) {
   #menu_button {
     width: 11vw;
     height: 90%;
@@ -1272,17 +1289,17 @@ span > a {
     line-height: 120%;
   }
   #section_tecnologias > h3 {
-    font-size: 16px;
+    font-size: 15px;
   }
   .exp > ul {
-    font-size: 15px;
+    font-size: 12px;
   }
   .exp > li {
     font-size: 10px;
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 260px) {
   .of_header > h1 {
     font-size: 20px;
   }
@@ -1317,19 +1334,19 @@ span > a {
     font-size: 17px;
   }
   #perfil_description {
-    font-size: 9.2px;
+    font-size: 9px;
   }
   #section_tecnologias > h3 {
-    font-size: 15px;
-  }
-  .exp > ul {
     font-size: 13px;
   }
+  .exp > ul {
+    font-size: 11px;
+  }
   .exp > li {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 }
-@media (max-width: 210px) {
+@media (max-width: 230px) {
   .of_header > h1 {
     font-size: 17px;
   }
@@ -1345,13 +1362,18 @@ span > a {
     font-size: 8.3px;
   }
   #section_tecnologias > h3 {
-    font-size: 13px;
+    font-size: 12px;
   }
   .exp > ul {
-    font-size: 11px;
+    font-size: 10px;
   }
   .exp > li {
-    font-size: 8.5px;
+    font-size: 8.3px;
+  }
+}
+@media (max-width: 190px) {
+  #perfil_description {
+    font-size: 7.5px;
   }
 }
 /*RESPONSIVE DESIGN END*/
