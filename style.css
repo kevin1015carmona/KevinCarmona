@@ -66,8 +66,8 @@ header {
 #menu_button {
   display: block;
   float: right;
-  margin-right: 2vw;
-  width: 6vw;
+  margin-right: 4vw;
+  width: 5vw;
   height: 80%;
   background-color: #acacacf0;
   display: flex;
@@ -837,9 +837,46 @@ span > a {
   }
 
   #menu_button {
-    width: 8%;
+    width: 7vw;
     max-width: none;
   }
+
+  @keyframes nav_menu1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-45deg) translate(-10px, 7px);
+    }
+  }
+
+  @keyframes nav_menu1_return {
+    from {
+      transform: rotate(-45deg) translate(-10px, 7px);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes nav_menu2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+  }
+
+  @keyframes nav_menu2_return {
+    from {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
   span:active {
     animation: menu_color 1s forwards;
   }
@@ -1016,23 +1053,23 @@ span > a {
   }
 
   #menu_button {
-    width: 8vw;
-    height: 95%;
+    width: 7.5vw;
+    height: 75%;
     margin-right: 5vw;
   }
 
-  @keyframes nav_menu2 {
+  @keyframes nav_menu1 {
     from {
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(45deg) translate(0px, 0px);
+      transform: rotate(-45deg) translate(-10px, 9px);
     }
   }
 
-  @keyframes nav_menu2_return {
+  @keyframes nav_menu1_return {
     from {
-      transform: rotate(45deg) translate(0px, 0px);
+      transform: rotate(-45deg) translate(-10px, 9px);
     }
     to {
       transform: rotate(0deg);
@@ -1040,7 +1077,7 @@ span > a {
   }
 
   body {
-    grid-template-rows: 2% 98%;
+    grid-template-rows: 3% 97%;
     height: 1900px;
   }
   #about {
@@ -1219,9 +1256,44 @@ span > a {
 }
 
 @media (min-width: 0px) and (max-width: 450px) {
+  @keyframes nav_menu1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-45deg) translate(-9px, 8px);
+    }
+  }
+
+  @keyframes nav_menu1_return {
+    from {
+      transform: rotate(-45deg) translate(-9px, 8px);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes nav_menu2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+  }
+
+  @keyframes nav_menu2_return {
+    from {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
   #menu_button {
-    width: 10vw;
-    height: 95%;
+    width: 9vw;
+    height: 70%;
     margin-right: 5vw;
   }
   .bar {
@@ -1252,7 +1324,7 @@ span > a {
 @media (min-width: 0px) and (max-width: 378px) {
   #menu_button {
     width: 11vw;
-    height: 90%;
+    height: 75%;
     margin-right: 5vw;
   }
   @keyframes menu_expand {
@@ -1299,12 +1371,13 @@ span > a {
   }
 }
 
-@media (max-width: 260px) {
+@media (max-width: 310px) {
   .of_header > h1 {
     font-size: 20px;
   }
   #menu_button {
     width: 12vw;
+    height: 65%;
   }
   @keyframes menu_expand {
     from {
@@ -1346,13 +1419,13 @@ span > a {
     font-size: 9px;
   }
 }
-@media (max-width: 230px) {
+@media (max-width: 270px) {
   .of_header > h1 {
     font-size: 17px;
   }
   #menu_button {
     width: 13vw;
-    height: 80%;
+    height: 65%;
   }
   #about {
     height: 29%;
@@ -1371,7 +1444,14 @@ span > a {
     font-size: 8.3px;
   }
 }
-@media (max-width: 190px) {
+@media (max-width: 220px) {
+  #menu_nutton {
+    width: 14vw;
+    height: 55%;
+  }
+  .of_header > h1 {
+    font-size: 16px;
+  }
   #perfil_description {
     font-size: 7.5px;
   }
