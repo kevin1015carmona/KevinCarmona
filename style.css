@@ -8,7 +8,7 @@ a {
 
 body {
   display: grid;
-  grid-template-rows: 2.5% 97.5%;
+  grid-template-rows: 3% 97%;
   height: 2250px;
   width: 100vw;
   background-image: url(imagenes/pattern.png);
@@ -87,7 +87,7 @@ header {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-45deg) translate(-8px, 7px);
+    transform: rotate(-45deg) translate(-10px, 10px);
   }
 }
 
@@ -382,12 +382,31 @@ span > a {
   text-align: center;
   grid-column: 1/4;
 }
+#certifications > button {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+  border: none;
+}
+
+#arrow_back_wrap {
+  grid-column: 1/2;
+}
 
 #certification_log_wrap {
   height: 83%;
   column-gap: 3vw;
   display: -webkit-inline-box;
   overflow-y: visible;
+  grid-column: 2/3;
+}
+
+#arrow_forwards_wrap {
+  grid-column: 3/4;
+}
+#certifications::-webkit-scrollbar {
+  display: none;
 }
 
 /*ANIMACIONES PASARELA DE CERTIFICADOS */
@@ -438,18 +457,6 @@ span > a {
 }
 
 /*ANIMACIONES PASARELA DE CERTIFICADOS */
-
-#certifications::-webkit-scrollbar {
-  display: none;
-}
-
-#certifications > button {
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  background-color: white;
-  border: none;
-}
 
 @keyframes down_up {
   from {
@@ -688,6 +695,7 @@ span > a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50% 50%;
     height: 93%;
+    padding-left: 2vw;
   }
 
   .certification_img {
@@ -748,15 +756,6 @@ span > a {
     }
     to {
       margin-left: -95vw;
-    }
-  }
-
-  @keyframes return_click {
-    from {
-      margin-left: -145vw;
-    }
-    to {
-      margin-left: 0vw;
     }
   }
 
@@ -948,11 +947,11 @@ span > a {
     row-gap: 1%;
     opacity: 1;
     justify-items: center;
-    column-gap: 5vw;
+    column-gap: 8vw;
   }
 
   .certification_img {
-    width: 38vw;
+    width: 40vw;
   }
   /*---------------------*/
 
@@ -961,22 +960,22 @@ span > a {
       margin-left: 0vw;
     }
     to {
-      margin-left: -80vw;
+      margin-left: -93vw;
     }
   }
 
   @keyframes second_click_forwards {
     from {
-      margin-left: -80vw;
+      margin-left: -93vw;
     }
     to {
-      margin-left: -120vw;
+      margin-left: -140vw;
     }
   }
 
   @keyframes first_click_back {
     from {
-      margin-left: -80vw;
+      margin-left: -93vw;
     }
     to {
       margin-left: 0vw;
@@ -985,19 +984,10 @@ span > a {
 
   @keyframes second_click_back {
     from {
-      margin-left: -120vw;
+      margin-left: -140vw;
     }
     to {
-      margin-left: -80vw;
-    }
-  }
-
-  @keyframes return_click {
-    from {
-      margin-left: -120vw;
-    }
-    to {
-      margin-left: 0vw;
+      margin-left: -93vw;
     }
   }
 
@@ -1318,6 +1308,10 @@ span > a {
   }
   .exp > li {
     font-size: 11px;
+  }
+
+  #certifications > button > img {
+    width: 10vw;
   }
 }
 
