@@ -400,6 +400,7 @@ span > a {
   display: -webkit-inline-box;
   overflow-y: visible;
   grid-column: 2/3;
+  overflow: hidden;
 }
 
 #arrow_forwards_wrap {
@@ -710,22 +711,13 @@ span > a {
       margin-left: 0vw;
     }
     to {
-      margin-left: -56vw;
+      margin-left: -96vw;
     }
   }
 
   @keyframes second_click_forwards {
     from {
-      margin-left: -56vw;
-    }
-    to {
-      margin-left: -95vw;
-    }
-  }
-
-  @keyframes three_click_forwards {
-    from {
-      margin-left: -95vw;
+      margin-left: -96vw;
     }
     to {
       margin-left: -145vw;
@@ -734,7 +726,7 @@ span > a {
 
   @keyframes first_click_back {
     from {
-      margin-left: -56vw;
+      margin-left: -96vw;
     }
     to {
       margin-left: 0vw;
@@ -743,19 +735,10 @@ span > a {
 
   @keyframes second_click_back {
     from {
-      margin-left: -95vw;
-    }
-    to {
-      margin-left: -56vw;
-    }
-  }
-
-  @keyframes three_click_back {
-    from {
       margin-left: -145vw;
     }
     to {
-      margin-left: -95vw;
+      margin-left: -96vw;
     }
   }
 
@@ -957,7 +940,7 @@ span > a {
 
   @keyframes first_click_forwards {
     from {
-      margin-left: 0vw;
+      margin-left: 2vw;
     }
     to {
       margin-left: -93vw;
@@ -978,7 +961,7 @@ span > a {
       margin-left: -93vw;
     }
     to {
-      margin-left: 0vw;
+      margin-left: 2vw;
     }
   }
 
@@ -1017,6 +1000,7 @@ span > a {
 
   #certifications {
     height: 29%;
+    grid-template-columns: 3vw 92vw 5vw;
   }
 
   #projects {
@@ -1028,6 +1012,7 @@ span > a {
     grid-template-rows: 48% 48%;
     justify-items: center;
     row-gap: 1%;
+    margin-left: 2vw;
     opacity: 1;
   }
 
@@ -1147,6 +1132,7 @@ span > a {
 
   #certifications {
     height: 25%;
+    grid-template-columns: 5vw 89vw 6vw;
   }
 
   #certifications > h1 {
@@ -1157,12 +1143,12 @@ span > a {
     opacity: 1;
     grid-template-columns: 100%;
     grid-template-rows: 33% 33% 33%;
-    column-gap: 5vw;
+    column-gap: 8vw;
     height: 93%;
   }
   .certification_img {
     grid-column: 1/2;
-    width: 43vw;
+    width: 40vw;
   }
   .css {
     grid-row: 1/2;
@@ -1308,6 +1294,18 @@ span > a {
   }
   .exp > li {
     font-size: 11px;
+  }
+
+  #certifications {
+    grid-template-columns: 7vw 86vw 7vw;
+  }
+
+  .certification_img {
+    width: 70vw;
+  }
+
+  .css {
+    margin-left: 12vw;
   }
 
   #certifications > button > img {

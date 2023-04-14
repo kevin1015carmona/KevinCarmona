@@ -54,9 +54,6 @@ window.addEventListener("load", function () {
       } else if (index === 2) {
         certification_log_wrap.style.animation =
           "second_click_forwards .5s forwards";
-      } else if (index === 3) {
-        certification_log_wrap.style.animation =
-          "three_click_forwards .5s forwards";
         arrow_forwards.style.display = "none";
       }
     });
@@ -75,9 +72,6 @@ window.addEventListener("load", function () {
       if (index === 1) {
         certification_log_wrap.style.animation =
           "second_click_back .5s forwards";
-      } else if (index === 2) {
-        certification_log_wrap.style.animation =
-          "three_click_back .5s forwards";
       }
     });
   } else if (
@@ -172,8 +166,13 @@ window.addEventListener("load", function () {
       } else if (index === 2) {
         certification_log_wrap.style.animation =
           "second_click_forwards .5s forwards";
+      } else if (index === 3) {
+        certification_log_wrap.style.animation =
+          "three_click_forwards .5s forwards";
+      } else if (index === 4) {
+        certification_log_wrap.style.animation =
+          "four_click_forwards .5s forwards";
         arrow_forwards.style.display = "none";
-        console.log("Segundo click");
       }
     });
     arrow_back.addEventListener("click", function () {
@@ -190,6 +189,11 @@ window.addEventListener("load", function () {
       } else if (index === 1) {
         certification_log_wrap.style.animation =
           "second_click_back .5s forwards";
+      } else if (index === 2) {
+        certification_log_wrap.style.animation =
+          "three_click_back .5s forwards";
+      } else if (index === 3) {
+        certification_log_wrap.style.animation = "four_click_back .5s forwards";
       }
     });
   }

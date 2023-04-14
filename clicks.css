@@ -1,0 +1,70 @@
+@media (min-width: 0px) and (max-width: 450px) {
+  @keyframes first_click_forwards {
+    from {
+      margin-left: 0vw;
+    }
+    to {
+      margin-left: -82vw;
+    }
+  }
+
+  @keyframes second_click_forwards {
+    from {
+      margin-left: -82vw;
+    }
+    to {
+      margin-left: -152vw;
+    }
+  }
+
+  @keyframes three_click_forwards {
+    from {
+      margin-left: -152vw;
+    }
+    to {
+      margin-left: -232vw;
+    }
+  }
+
+  @keyframes four_click_forwards {
+    from {
+      margin-left: -232vw;
+    }
+    to {
+      margin-left: -310vw;
+    }
+  }
+
+  @keyframes first_click_back {
+    from {
+      margin-left: -82vw;
+    }
+    to {
+      margin-left: 0vw;
+    }
+  }
+  @keyframes second_click_back {
+    from {
+      margin-left: -152vw;
+    }
+    to {
+      margin-left: -82vw;
+    }
+  }
+  @keyframes three_click_back {
+    from {
+      margin-left: -232vw;
+    }
+    to {
+      margin-left: -152vw;
+    }
+  }
+  @keyframes four_click_back {
+    from {
+      margin-left: -310vw;
+    }
+    to {
+      margin-left: -232vw;
+    }
+  }
+}
